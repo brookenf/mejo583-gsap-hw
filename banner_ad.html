@@ -34,6 +34,7 @@
 			height: inherit;
 			top: 0;
 			left: 0;
+			background-repeat: repeat-x;
 		}
 
 		#myAd #myAd_photo {
@@ -112,7 +113,6 @@
 		(function () {
 
 			var tl1 = new TimelineMax();
-
 			tl1.from('#myAd_txt2', 1.3, { top: -100, ease: Power2.easeOut })
 				.to('#myAd_txt1', 1.3, { top: 210, ease: Power2.easeOut }, '-=.9')
 				.from('#myAd_marker', 1.2, { top: -110, ease: Bounce.easeOut }, '-=.5')
@@ -121,6 +121,8 @@
 				.from('#myAd_surfboard', 1.3, { top: 260, rotation: -130, left: 300, ease: Back.easeOut }, 'cta');
 
 			// tl1.seek('cta');
+			var tl2 = new TimelineMax({ repeat: -1 });
+			tl2.to('#myAd_clouds', 65, { backgroundPositionX: 649, ease: Power0.easeOut })
 
 
 		}());
